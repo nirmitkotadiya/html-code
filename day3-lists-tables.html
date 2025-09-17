@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Day 03 — HTML Nested Lists &amp; Tables</title>
+  </head>
+  <body>
+    <header>
+      <h1>Day 03: HTML Nested Lists &amp; Tables</h1>
+      <nav>
+        <a href="day2-what-is-html.html">Prev: Day 02</a> |
+        <a href="index.html">Home</a> |
+        <a href="day4-file-paths.html">Next: Day 04</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Nested lists</h2>
+        <p>
+          You can nest ordered and unordered lists to create hierarchical lists.
+        </p>
+        <pre><code>&lt;ul&gt;
+&lt;li&gt;Fruits
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vegetables
+&lt;ol&gt;
+&lt;li&gt;Carrot&lt;/li&gt;
+&lt;li&gt;Spinach&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+        <h2>Tables</h2>
+        <p>
+          Tables display tabular data using <code>&lt;table&gt;</code>,
+          <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and
+          <code>&lt;td&gt;</code>.
+        </p>
+        <pre><code>&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Role&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;Developer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+        <h3>Complex example: list inside table cell</h3>
+        <pre><code>&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;Section&lt;/th&gt;&lt;th&gt;Items&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fruits &amp; Veg&lt;/td&gt;
+&lt;td&gt;
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Carrot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>✅ End of Day 03 — <a href="index.html">Back to index</a></p>
+    </footer>
+  </body>
+</html>

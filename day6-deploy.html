@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Media Elements</title>
+  </head>
+  <body>
+    <h1>HTML Media Elements</h1>
+    <p>Learn how to embed video and audio content in your web pages</p>
+
+    <h2>Basic Video Example</h2>
+    <p>The simplest way to embed a video with controls:</p>
+
+    <video controls width="600">
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Audio Example</h2>
+    <p>Embedding audio works similarly to video:</p>
+
+    <audio controls>
+      <source
+        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>Advanced Video with Multiple Sources</h2>
+    <p>For maximum browser compatibility, provide multiple source formats:</p>
+
+    <video
+      controls
+      width="600"
+      poster="https://placehold.co/600x340/1a2a6c/white?text=Video+Thumbnail"
+    >
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Video Attributes</h2>
+    <p>Control your media with these attributes:</p>
+
+    <ul>
+      <li><strong>controls</strong>: Displays playback controls</li>
+      <li>
+        <strong>autoplay</strong>: Starts playback automatically (may be blocked
+        by browsers)
+      </li>
+      <li><strong>loop</strong>: Repeats the media continuously</li>
+      <li><strong>muted</strong>: Mutes the audio by default</li>
+      <li>
+        <strong>poster</strong>: Specifies an image to show before playback
+      </li>
+      <li>
+        <strong>width</strong> and <strong>height</strong>: Set the dimensions
+        of the player
+      </li>
+    </ul>
+
+    <h2>Accessibility with Tracks</h2>
+    <p>Make your media accessible with captions and subtitles:</p>
+
+    <pre>
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <h2>Copyright Symbol</h2>
+    <p>You can add a copyright symbol using HTML entities:</p>
+
+    <p>Copyright &copy; 2024 HTML Media Examples. All Rights Reserved.</p>
+    <p>Other symbols: &reg; &trade; &lt; &gt; &amp;</p>
+
+    <h2>Complete Example with Multiple Formats</h2>
+    <p>
+      This is the robust, professional way to embed media with multiple formats:
+    </p>
+
+    <video controls width="600">
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.webm"
+        type="video/webm"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <footer>
+      <p>🎉 Congratulations! You've completed the HTML learning series!</p>
+      <p>✅ End of Day 06 — <a href="index.html">Back to Index</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Day 01 — Introduction to Web Development</title>
+  </head>
+  <body>
+    <header>
+      <h1>🌐 Day 01: Introduction to Web Development</h1>
+      <nav>
+        <a href="index.html">🏠 Home</a> |
+        <a href="day2-what-is-html.html">➡️ Next: Day 02</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section 1 -->
+      <section>
+        <h2>💡 What is Web Development?</h2>
+        <p>
+          Web development is building websites and web applications that run on
+          browsers. It commonly involves three areas:
+        </p>
+        <ul>
+          <li><strong>HTML</strong> — structure and content</li>
+          <li>
+            <strong>CSS</strong> — presentation (not used in this project)
+          </li>
+          <li><strong>JavaScript</strong> — behavior (not used here)</li>
+        </ul>
+
+        <h3>⚙️ How Web Pages Work (Simple)</h3>
+        <ol>
+          <li>
+            Your browser requests an <code>.html</code> file from a server or
+            local disk.
+          </li>
+          <li>The browser parses the HTML and displays content.</li>
+          <li>Links connect pages to create a multi-page site.</li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <!-- Section 2 -->
+      <section>
+        <h2>📚 Web Development Course</h2>
+        <h3>🌍 HOW Does Internet Work</h3>
+
+        <article>
+          <h4>🔑 Principle 1: The Need to Share Information</h4>
+          <p>
+            The most fundamental truth is that we have information on one
+            computer (Computer A) and we want it to be on another computer
+            (Computer B)...
+          </p>
+        </article>
+
+        <article>
+          <h4>🔑 Principle 2: The Problem of Scale</h4>
+          <p>
+            When more computers join, connecting every machine directly becomes
+            impossible... The solution is a <strong>Local Network</strong> with
+            a Switch.
+          </p>
+        </article>
+
+        <article>
+          <h4>🔑 Principle 3: The Problem of Connecting Networks</h4>
+          <p>
+            Networks are connected using a <strong>Router</strong>, creating the
+            Internet: a "network of networks".
+          </p>
+        </article>
+
+        <article>
+          <h4>🔑 Principle 4: The Problem of Finding Anyone (Addressing)</h4>
+          <p>
+            Each device needs a unique <strong>IP Address</strong>, just like
+            every house needs a postal address.
+          </p>
+        </article>
+
+        <article>
+          <h4>🔑 Principle 5: The Problem of Reliability and Fairness</h4>
+          <p>
+            Large files are split into <strong>packets</strong> and reassembled
+            using <strong>TCP/IP</strong> for reliable transfer.
+          </p>
+        </article>
+
+        <details>
+          <summary>📖 Read Full Explanation (Principles + Summary)</summary>
+          <p>
+            So, the internet isn't magic. It's a series of logical solutions to
+            a series of fundamental problems:
+          </p>
+          <ol>
+            <li>Problem: Share data → Solution: Direct link</li>
+            <li>
+              Problem: Connect many computers → Solution: Local network with
+              Switch
+            </li>
+            <li>Problem: Connect many networks → Solution: Routers</li>
+            <li>Problem: Find specific computers → Solution: IP Address</li>
+            <li>Problem: Reliable communication → Solution: TCP/IP Packets</li>
+          </ol>
+        </details>
+      </section>
+
+      <hr />
+
+      <!-- Section 3 -->
+      <section>
+        <h2>🔎 IP Address</h2>
+        <h3>IPv4</h3>
+        <p>
+          Classic 32-bit addresses like <code>172.217.16.142</code>. Limited to
+          <strong>~4.3 billion</strong> unique addresses.
+        </p>
+
+        <h3>🌍 Public vs Private IP</h3>
+        <ul>
+          <li>
+            <strong>Public IP:</strong> Unique global address, assigned by ISP.
+          </li>
+          <li>
+            <strong>Private IP:</strong> Used inside local networks (e.g.,
+            <code>192.168.x.x</code>).
+          </li>
+        </ul>
+
+        <h3>IPv6</h3>
+        <p>
+          128-bit addresses (2<sup>128</sup> possibilities). Example:
+          <code>2001:0db8:85a3::8a2e:0370:7334</code>
+        </p>
+      </section>
+
+      <hr />
+
+      <!-- Section 4 -->
+      <section>
+        <h2>🖥️ MAC Address</h2>
+        <p>
+          Unique hardware identifier for network devices (48-bit, shown as
+          <code>3C:22:FB:A3:B4:C5</code>).
+        </p>
+
+        <h3>How to Find</h3>
+        <ul>
+          <li>
+            <strong>Windows:</strong> <code>ipconfig /all</code> or
+            <code>getmac /v</code>
+          </li>
+          <li><strong>macOS:</strong> <code>ifconfig</code></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- Section 5 -->
+      <section>
+        <h2>🔢 Port Numbers</h2>
+        <p>Ports identify specific services (0–65535). Three categories:</p>
+        <ol>
+          <li>
+            <strong>Well-Known (0–1023):</strong> HTTP(80), HTTPS(443), DNS(53).
+          </li>
+          <li>
+            <strong>Registered (1024–49151):</strong> MongoDB(27017),
+            MySQL(3306), React Dev (3000).
+          </li>
+          <li>
+            <strong>Dynamic (49152–65535):</strong> Temporary, client-side use.
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <!-- Section 6 -->
+      <section>
+        <h2>🌐 DNS (Domain Name System)</h2>
+        <p>
+          DNS translates <code>google.com</code> → <code>142.250.72.206</code>.
+          Steps:
+        </p>
+        <ol>
+          <li>Check cache (browser → OS → router).</li>
+          <li>Ask Recursive Resolver (ISP or public like Google’s 8.8.8.8).</li>
+          <li>Resolver queries Root → TLD → Authoritative Name Server.</li>
+          <li>Answer returned and cached.</li>
+          <li>Browser connects to IP using port (e.g., 443 for HTTPS).</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>✅ End of Day 01 — <a href="index.html">Back to Index</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 04 — File Path in HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Day 04: File Path in HTML</h1>
+      <nav>
+        <a href="day3-lists-tables.html">Prev: Day 03</a> |
+        <a href="index.html">Home</a> |
+        <a href="day5-forms.html">Next: Day 05</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Types of paths</h2>
+        <ul>
+          <li>
+            <strong>Absolute path</strong> — full URL or absolute path from
+            root: <code>/images/pic.jpg</code>
+          </li>
+          <li>
+            <strong>Relative path</strong> — relative to the current file:
+            <code>images/pic.jpg</code> or <code>../assets/pic.jpg</code>
+          </li>
+        </ul>
+
+        <h3>Examples</h3>
+        <p>Link to another page in the same folder:</p>
+        <pre><code>&lt;a href="day5-forms.html"&gt;Go to Day 5&lt;/a&gt;</code></pre>
+
+        <p>Link to a file in a subfolder:</p>
+        <pre><code>&lt;img src="images/photo.png" alt="Photo"&gt;</code></pre>
+
+        <p>Go up one folder:</p>
+        <pre><code>&lt;a href="../index.html"&gt;Up one level&lt;/a&gt;</code></pre>
+
+        <h3>Visual Directory Structure</h3>
+        <pre>
+my-website/
+├── index.html
+├── about.html
+│
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+│
+└── pages/
+    ├── contact.html
+    └── terms.html
+            </pre
+        >
+
+        <h3>Path Examples Explained</h3>
+        <table border="1">
+          <tr>
+            <th>Current File</th>
+            <th>Target File</th>
+            <th>Path to Use</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>index.html</td>
+            <td>about.html</td>
+            <td><code>about.html</code></td>
+            <td>Same folder - just use filename</td>
+          </tr>
+          <tr>
+            <td>index.html</td>
+            <td>logo.png</td>
+            <td><code>images/logo.png</code></td>
+            <td>File in subfolder - path to file from current location</td>
+          </tr>
+          <tr>
+            <td>pages/contact.html</td>
+            <td>logo.png</td>
+            <td><code>../images/logo.png</code></td>
+            <td>Go up one level (to parent folder) then into images folder</td>
+          </tr>
+          <tr>
+            <td>pages/contact.html</td>
+            <td>index.html</td>
+            <td><code>../index.html</code></td>
+            <td>Go up one level to parent folder</td>
+          </tr>
+        </table>
+
+        <h3>Try It Yourself</h3>
+        <p>
+          Imagine you're in the <code>pages/contact.html</code> file and want to
+          link to these resources:
+        </p>
+        <ol>
+          <li>
+            Link to the homepage (index.html):
+            <input type="text" value="../index.html" readonly size="15" />
+          </li>
+          <li>
+            Link to the hero image:
+            <input type="text" value="../images/hero.jpg" readonly size="15" />
+          </li>
+          <li>
+            Link to the terms page:
+            <input type="text" value="terms.html" readonly size="15" />
+          </li>
+        </ol>
+
+        <h3>Absolute vs Relative Paths</h3>
+        <table border="1">
+          <tr>
+            <th>Path Type</th>
+            <th>When to Use</th>
+            <th>Examples</th>
+          </tr>
+          <tr>
+            <td>Absolute</td>
+            <td>
+              Linking to external resources or resources at the root of your
+              domain
+            </td>
+            <td>
+              <code>https://example.com/images/logo.png</code><br /><code
+                >/assets/css/style.css</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Relative</td>
+            <td>Linking to resources within your own website</td>
+            <td>
+              <code>images/photo.jpg</code><br /><code>../scripts/app.js</code>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Special Path Symbols</h3>
+        <ul>
+          <li><code>./</code> - Current directory (optional in most cases)</li>
+          <li><code>../</code> - Parent directory (go up one level)</li>
+          <li><code>../../</code> - Go up two levels</li>
+          <li><code>/</code> - Root directory of the website</li>
+        </ul>
+
+        <h3>Tip</h3>
+        <p>
+          When testing locally, open <code>index.html</code> in your browser.
+          For consistency when deploying, keep a clean folder structure (e.g.,
+          <code>css/</code>, <code>images/</code>, <code>pages/</code>).
+        </p>
+
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+          <li>
+            Using absolute paths to your local machine (e.g.,
+            <code>C:/Users/Name/website/images/logo.png</code>)
+          </li>
+          <li>
+            Incorrect number of <code>../</code> when navigating through folders
+          </li>
+          <li>Case sensitivity issues (Linux servers are case-sensitive)</li>
+          <li>Forgetting to include file extensions</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>✅ End of Day 04 — <a href="index.html">Back to index</a></p>
+      <p>Created as part of HTML learning series - Day 04</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 05 — HTML Forms From Beginner to Advance</title>
+  </head>
+  <body>
+    <header>
+      <h1>Day 05: HTML Forms — From Beginner to Advanced</h1>
+      <nav>
+        <a href="day4-file-paths.html">Prev: Day 04</a> |
+        <a href="index.html">Home</a> |
+        <a href="day6-deploy.html">Next: Day 06</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Basic form structure</h2>
+        <p>
+          The <code>&lt;form&gt;</code> element creates a container for form
+          elements. The <code>action</code> attribute specifies where to send
+          the form data, and the <code>method</code> attribute specifies how to
+          send it (GET or POST).
+        </p>
+        <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;</code></pre>
+
+        <h3>Basic Form Example</h3>
+        <form action="#" method="get">
+          <label>Name: <input type="text" name="name" /></label><br />
+          <label>Email: <input type="email" name="email" /></label><br />
+          <input type="submit" value="Send" />
+        </form>
+
+        <h2>Form Controls</h2>
+
+        <h3>Text Inputs</h3>
+        <form action="#">
+          <fieldset>
+            <legend>Text Input Examples</legend>
+            <p>
+              <label
+                >Text: <input type="text" name="text" placeholder="Enter text"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Password:
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Email:
+                <input type="email" name="email" placeholder="user@example.com"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Number:
+                <input type="number" name="quantity" min="1" max="10" value="1"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Telephone:
+                <input type="tel" name="phone" placeholder="123-456-7890"
+              /></label>
+            </p>
+            <p>
+              <label
+                >URL:
+                <input
+                  type="url"
+                  name="website"
+                  placeholder="https://example.com"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Search:
+                <input type="search" name="query" placeholder="Search..."
+              /></label>
+            </p>
+          </fieldset>
+        </form>
+
+        <h3>Selection Controls</h3>
+        <form action="#">
+          <fieldset>
+            <legend>Selection Examples</legend>
+            <p>
+              <label>Radio Buttons:</label><br />
+              <input type="radio" id="option1" name="options" value="option1" />
+              <label for="option1">Option 1</label><br />
+              <input type="radio" id="option2" name="options" value="option2" />
+              <label for="option2">Option 2</label><br />
+              <input type="radio" id="option3" name="options" value="option3" />
+              <label for="option3">Option 3</label>
+            </p>
+
+            <p>
+              <label>Checkboxes:</label><br />
+              <input type="checkbox" id="check1" name="checks" value="check1" />
+              <label for="check1">Checkbox 1</label><br />
+              <input type="checkbox" id="check2" name="checks" value="check2" />
+              <label for="check2">Checkbox 2</label><br />
+              <input type="checkbox" id="check3" name="checks" value="check3" />
+              <label for="check3">Checkbox 3</label>
+            </p>
+
+            <p>
+              <label for="dropdown">Dropdown:</label>
+              <select id="dropdown" name="dropdown">
+                <option value="">--Please choose an option--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="multiselect">Multi-select:</label>
+              <select id="multiselect" name="multiselect" multiple size="3">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </p>
+          </fieldset>
+        </form>
+
+        <h3>Other Input Types</h3>
+        <form action="#">
+          <fieldset>
+            <legend>Other Input Types</legend>
+            <p>
+              <label
+                >Range:
+                <input type="range" name="range" min="0" max="100" value="50"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Color: <input type="color" name="color" value="#ff0000"
+              /></label>
+            </p>
+            <p>
+              <label>Date: <input type="date" name="date" /></label>
+            </p>
+            <p>
+              <label>Time: <input type="time" name="time" /></label>
+            </p>
+            <p>
+              <label>File: <input type="file" name="file" /></label>
+            </p>
+            <p>
+              <label
+                >Hidden:
+                <input type="hidden" name="hidden" value="secret-value"
+              /></label>
+            </p>
+          </fieldset>
+        </form>
+
+        <h3>Textarea</h3>
+        <form action="#">
+          <p>
+            <label for="message">Message:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="40"
+              placeholder="Enter your message here..."
+            ></textarea>
+          </p>
+        </form>
+
+        <h2>Form Attributes</h2>
+        <table border="1">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>required</code></td>
+            <td>Makes the field mandatory</td>
+            <td><code>&lt;input type="text" required&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>placeholder</code></td>
+            <td>Hint text that disappears when user types</td>
+            <td><code>&lt;input placeholder="Enter name"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>disabled</code></td>
+            <td>Makes the field non-interactive</td>
+            <td><code>&lt;input type="text" disabled&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>readonly</code></td>
+            <td>Makes the field viewable but not editable</td>
+            <td><code>&lt;input type="text" readonly&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>min</code>/<code>max</code></td>
+            <td>Sets minimum/maximum values for number/range inputs</td>
+            <td><code>&lt;input type="number" min="1" max="10"&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>pattern</code></td>
+            <td>Specifies a regex pattern for validation</td>
+            <td><code>&lt;input pattern="[A-Za-z]{3}"&gt;</code></td>
+          </tr>
+        </table>
+
+        <h2>Complete Registration Form Example</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Registration Form</legend>
+
+            <p>
+              <label
+                >Full name:
+                <input
+                  type="text"
+                  name="fullname"
+                  required
+                  placeholder="Your full name"
+              /></label>
+            </p>
+
+            <p>
+              <label
+                >Email:
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+              /></label>
+            </p>
+
+            <p>
+              <label
+                >Password:
+                <input type="password" name="password" required minlength="8"
+              /></label>
+            </p>
+
+            <p>
+              <label>Gender:</label><br />
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </p>
+
+            <p>
+              <label>Interests:</label><br />
+              <input type="checkbox" id="html" name="interests" value="html" />
+              <label for="html">HTML</label>
+              <input type="checkbox" id="css" name="interests" value="css" />
+              <label for="css">CSS</label>
+              <input type="checkbox" id="js" name="interests" value="js" />
+              <label for="js">JavaScript</label>
+            </p>
+
+            <p>
+              <label for="country">Country:</label>
+              <select id="country" name="country" required>
+                <option value="">-- Select Country --</option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="birthdate">Date of Birth:</label>
+              <input type="date" id="birthdate" name="birthdate" />
+            </p>
+
+            <p>
+              <label for="bio">About you:</label><br />
+              <textarea
+                id="bio"
+                name="bio"
+                rows="4"
+                cols="40"
+                placeholder="Tell us about yourself..."
+              ></textarea>
+            </p>
+
+            <p>
+              <label for="avatar">Profile Picture:</label>
+              <input type="file" id="avatar" name="avatar" accept="image/*" />
+            </p>
+
+            <p>
+              <input type="checkbox" id="terms" name="terms" required />
+              <label for="terms">I agree to the terms and conditions</label>
+            </p>
+
+            <p>
+              <button type="submit">Register</button>
+              <button type="reset">Clear Form</button>
+            </p>
+          </fieldset>
+        </form>
+
+        <h2>Form Best Practices</h2>
+        <ul>
+          <li>
+            Always use <code>&lt;label&gt;</code> elements for accessibility
+          </li>
+          <li>
+            Group related form controls with <code>&lt;fieldset&gt;</code> and
+            <code>&lt;legend&gt;</code>
+          </li>
+          <li>Use appropriate input types for better mobile experience</li>
+          <li>Validate inputs on both client and server side</li>
+          <li>Provide clear error messages when validation fails</li>
+          <li>Keep forms simple and only ask for necessary information</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>✅ End of Day 05 — <a href="index.html">Back to index</a></p>
+      <p>Created as part of HTML learning series - Day 05</p>
+    </footer>
+  </body>
+</html>
